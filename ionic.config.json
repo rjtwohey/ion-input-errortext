@@ -1,0 +1,7 @@
+{
+  "name": "ion-input-errortext",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
