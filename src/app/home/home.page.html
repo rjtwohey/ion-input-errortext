@@ -14,7 +14,39 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item>
+      <ion-input mode="md" labelPlacement="floating" fill="outline" [label]="usernameLabel" [helperText]="usernameNote"
+        [clearInput]="false" [errorText]="usernameError" aria-live="assertive" [attr.aria-label]="usernameLabel"
+        id="username-input" name="username-input" formControlName="username" class="evv-input"
+        [class.invalid]="!loginForm.controls['username'].valid && loginForm.controls['username'].touched">
+        <ion-icon slot="start" name="person" aria-hidden="true"></ion-icon>
+      </ion-input>
+    </ion-item>
+      <ion-item>
+      <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" helperText="Enter a valid email"
+        errorText="Invalid email" ngModel email aria-live="assertive"></ion-input>
+    </ion-item>
+
+    <div>
+      <label for="regularEmailInput">Email</label>
+      <input
+        id="regularEmailInput"
+        type="email"
+        aria-describedby="helperText regularErrorText"
+        aria-invalid="false"
+        placeholder="Enter your email"
+        (input)="validateRegularEmail($event)"
+      />
+      <span id="helperText">Enter a valid email</span>
+      <span
+        id="regularErrorText"
+        *ngIf="isRegularInvalid"
+        style="color: red;"
+        aria-live="assertive"
+        role="alert"
+      >
+        Invalid email
+      </span>
+    </div>
   </div>
 </ion-content>
