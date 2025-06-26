@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonIcon , IonInput, IonItem} from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonIcon , IonInput, IonItem, IonList} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonInput, IonItem],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonInput, IonItem, IonList],
 })
 export class HomePage {
   loginForm: FormGroup;

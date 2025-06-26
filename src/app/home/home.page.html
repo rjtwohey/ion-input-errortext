@@ -14,39 +14,19 @@
   </ion-header>
 
   <div id="container">
-    <ion-item>
-      <ion-input mode="md" labelPlacement="floating" fill="outline" [label]="usernameLabel" [helperText]="usernameNote"
-        [clearInput]="false" [errorText]="usernameError" aria-live="assertive" [attr.aria-label]="usernameLabel"
-        id="username-input" name="username-input" formControlName="username" class="evv-input"
-        [class.invalid]="!loginForm.controls['username'].valid && loginForm.controls['username'].touched">
-        <ion-icon slot="start" name="person" aria-hidden="true"></ion-icon>
-      </ion-input>
-    </ion-item>
+    
       <ion-item>
       <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" helperText="Enter a valid email"
         errorText="Invalid email" ngModel email aria-live="assertive"></ion-input>
+    </ion-item><ion-item>
+      <ion-input type="password" fill="solid" label="Password" labelPlacement="floating" helperText="Enter your password"
+        errorText="Invalid password" ngModel email aria-live="assertive"></ion-input>
     </ion-item>
 
-    <div>
-      <label for="regularEmailInput">Email</label>
-      <input
-        id="regularEmailInput"
-        type="email"
-        aria-describedby="helperText regularErrorText"
-        aria-invalid="false"
-        placeholder="Enter your email"
-        (input)="validateRegularEmail($event)"
-      />
-      <span id="helperText">Enter a valid email</span>
-      <span
-        id="regularErrorText"
-        *ngIf="isRegularInvalid"
-        style="color: red;"
-        aria-live="assertive"
-        role="alert"
-      >
-        Invalid email
-      </span>
-    </div>
+    <ion-list>
+      <ion-item >First Item</ion-item>
+      <ion-item >Second Item</ion-item>
+      <ion-item >Third Item</ion-item>
+    </ion-list>
   </div>
 </ion-content>
