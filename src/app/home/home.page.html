@@ -15,10 +15,23 @@
 
   <div id="container">
     
-      <ion-item>
-      <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" helperText="Enter a valid email"
-        errorText="Invalid email" ngModel email aria-live="assertive"></ion-input>
-    </ion-item><ion-item>
+    <ion-item>
+      <ion-input
+        type="email"
+        fill="solid"
+        label="Email"
+        labelPlacement="floating"
+        helperText="Enter a valid email"
+        errorText="Invalid email"
+        name="email"
+        [(ngModel)]="email"
+        #emailInput="ngModel"
+        required
+        email
+        aria-live="assertive">
+      </ion-input>
+    </ion-item>
+    <ion-item>
       <ion-input type="password" fill="solid" label="Password" labelPlacement="floating" helperText="Enter your password"
         errorText="Invalid password" ngModel email aria-live="assertive"></ion-input>
     </ion-item>
